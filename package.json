@@ -1,0 +1,66 @@
+{
+  "author": {
+    "name": "Chen, Yi-Cyuan",
+    "email": "emn178@gmail.com"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {},
+  "description": "",
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "jsdoc": "^3.4.0",
+    "mocha": "~2.3.4",
+    "nyc": "^11.3.0",
+    "requirejs": "^2.1.22",
+    "uglify-js": "^3.1.9",
+    "webworker-threads": "^0.7.11"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "b4f2fbb0b327455f598d6727e38ec272cd09c3f2",
+    "size": 9952,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/media/download/media-0.7.3.tgz"
+  },
+  "gitHead": "0263ab835f4847351a710f98488203108c0e1e90",
+  "homepage": "https://github.com/emn178/media",
+  "keywords": [
+    "media",
+    "hash",
+    "encryption",
+    "cryptography",
+    "HMAC"
+  ],
+  "license": "MIT",
+  "main": "src/media.js",
+  "maintainers": [
+    {
+      "name": "emn178",
+      "email": "emn178@gmail.com"
+    }
+  ],
+  "name": "media",
+  "nyc": {
+    "exclude": [
+      "tests"
+    ]
+  },
+  "optionalDependencies": {},
+  "publish_time": 1513594875384,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emn178/media.git"
+  },
+  "scripts": {
+    "build": "npm run-script compress;npm run-script doc",
+    "compress": "uglifyjs src/media.js -c -m eval --comments --output build/media.min.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "doc": "rm -rf doc;jsdoc src README.md -d doc",
+    "report": "nyc --reporter=html --reporter=text mocha tests/node-test.js",
+    "test": "nyc mocha tests/node-test.js"
+  },
+  "version": "0.7.3"
+}
